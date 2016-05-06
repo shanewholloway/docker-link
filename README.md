@@ -1,5 +1,7 @@
 # docker-link
 
+Binary-based tooling for interacting with docker from inside docker
+
 ### Use
 
 `docker-tunnel-socket` must have access to `/var/run/docker.sock` on the docker host:

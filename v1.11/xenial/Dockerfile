@@ -39,5 +39,5 @@ EXPOSE 2375
 CMD $APP_DIR/docker-tunnel-socket
 
 MAINTAINER Shane Holloway <shane.holloway@ieee.org>
-# TO IMAGE shane/docker-link:v1.11-xenial
+# TO IMAGE shane/docker-link:xenial
 
