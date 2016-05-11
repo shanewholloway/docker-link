@@ -39,11 +39,11 @@ Then to use the socket, run:
     docker run --rm -it \
         --link docker-link --volumes-from docker-link \
         shane/docker-link:node \
-        docker ps
+        node -p process.versions
 
 or run using `docker-link` as a utility collection:
 
     docker run --rm -it \
         --link docker-link --volumes-from docker-link \
         ubuntu:xenial \
-        /tools/node/enter gulp --help
+        /tools/node/enter node -p process.versions
