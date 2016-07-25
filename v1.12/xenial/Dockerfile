@@ -3,11 +3,11 @@ FROM ubuntu:xenial
 ENV TOOLS_DIR=/tools \
     V_CONTAINER_NAME=${NAME:-docker-link} \
     # https://github.com/docker/docker/releases \
-    V_DOCKER_ENGINE=1.11.2 \
+    V_DOCKER_ENGINE=1.12.0-rc4 \
     # https://github.com/docker/compose/releases \
-    V_DOCKER_COMPOSE=1.7.1 \
+    V_DOCKER_COMPOSE=1.8.0-rc2 \
     # https://github.com/docker/machine/releases \
-    V_DOCKER_MACHINE=v0.7.0
+    V_DOCKER_MACHINE=v0.8.0-rc2
 
 COPY docker-tunnel-socket $TOOLS_DIR/docker/
 
@@ -23,7 +23,7 @@ RUN apt-get update \
    -o docker-machine \
  && curl -sSL "https://github.com/docker/compose/releases/download/$V_DOCKER_COMPOSE/docker-compose-`uname -s`-`uname -m`" \
    -o docker-compose \
- && curl -sSL "https://get.docker.com/builds/`uname -s`/`uname -m`/docker-$V_DOCKER_ENGINE.tgz" \
+ && curl -sSL "https://test.docker.com/builds/`uname -s`/`uname -m`/docker-$V_DOCKER_ENGINE.tgz" \
      | tar -xzv --strip=1 docker/docker \
  \
  && chmod +x \

@@ -1,4 +1,4 @@
-FROM shane/docker-link:v1.11
+FROM shane/docker-link:v1.12
 
 ENV \
     # https://nodejs.org/dist/latest/ \

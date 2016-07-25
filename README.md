@@ -8,6 +8,7 @@ Binary-based tooling for interacting with docker from inside docker
 
     docker run -d --privileged --userns=host \
         -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /tools \
         --name docker-link \
         shane/docker-link
 
@@ -31,6 +32,7 @@ or run using `docker-link` as a utility collection:
 
     docker run -d --privileged --userns=host \
         -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /tools \
         --name docker-link \
         shane/docker-link:node
 
