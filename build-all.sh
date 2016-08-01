@@ -2,7 +2,6 @@
 
 docker build \
   -t shane/docker-link:v1.11 \
-  -t shane/docker-link:latest \
   -f ./v1.11/xenial/Dockerfile \
   ./v1.11
 
@@ -14,6 +13,7 @@ docker build \
 
 docker build \
   -t shane/docker-link:v1.12 \
+  -t shane/docker-link:latest \
   -f ./v1.12/xenial/Dockerfile \
   ./v1.12
 
